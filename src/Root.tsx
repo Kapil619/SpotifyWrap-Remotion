@@ -1,6 +1,6 @@
 import { Composition } from "remotion";
 import { Gradient } from "./Gradient";
-import { myCompSchema } from "./HelloWorld";
+import { Scene3 } from "./Scene3";
 import "./tailwind.css";
 
 // Each <Composition> is an entry in the sidebar!
@@ -19,13 +19,14 @@ export const RemotionRoot: React.FC = () => {
         fps={30}
         // You can override these props for each render:
         // https://www.remotion.dev/docs/parametrized-rendering
-        schema={myCompSchema}
-        defaultProps={{
-          titleText: "Welcome to Remotion",
-          titleColor: "#000000",
-          logoColor1: "#91EAE4",
-          logoColor2: "#86A8E7",
-        }}
+      />
+      <Composition
+        id="Scene3"
+        component={Scene3}
+        width={720}
+        height={1280}
+        durationInFrames={120}
+        fps={30}
       />
     </>
   );

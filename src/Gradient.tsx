@@ -1,8 +1,7 @@
-import { AbsoluteFill, useCurrentFrame, useVideoConfig } from "remotion";
+import { AbsoluteFill, useCurrentFrame } from "remotion";
 
-export const Gradient = () => {
+export const Gradient = ({ height }: { readonly height: number }) => {
   const frame = useCurrentFrame();
-  const { height } = useVideoConfig();
   const duration = 4 * 30;
   const offset = height * 2 * (frame / duration);
   return (
