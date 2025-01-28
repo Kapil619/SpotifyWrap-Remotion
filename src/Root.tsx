@@ -9,24 +9,24 @@ export const RemotionRoot: React.FC = () => {
   return (
     <>
       <Composition
-        // You can take the "id" to render a video:
-        // npx remotion render src/index.ts <id> out/video.mp4
         id="Gradient"
         component={Gradient}
         width={720}
         height={1280}
         durationInFrames={120}
         fps={30}
-        // You can override these props for each render:
-        // https://www.remotion.dev/docs/parametrized-rendering
       />
       <Composition
         id="Scene3"
         component={Scene3}
         width={720}
         height={1280}
-        durationInFrames={120}
+        durationInFrames={150}
         fps={30}
+        defaultProps={{
+          topSongName: "Crawling",
+          topSongArtistName: "Linkin Park",
+        }}
       />
     </>
   );

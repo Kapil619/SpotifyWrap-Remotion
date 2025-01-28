@@ -3,7 +3,7 @@ import { AbsoluteFill, useCurrentFrame } from "remotion";
 export const Gradient = ({ height }: { readonly height: number }) => {
   const frame = useCurrentFrame();
   const duration = 4 * 30;
-  const offset = height * 2 * (frame / duration);
+  const offset = height * 2.5 * ((frame % duration) / duration);
   return (
     <AbsoluteFill>
       <AbsoluteFill
