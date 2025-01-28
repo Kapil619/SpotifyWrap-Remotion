@@ -6,7 +6,7 @@ import {
   useVideoConfig,
 } from "remotion";
 import styled from "styled-components";
-import { Bar } from "./src/Bar";
+import { Bar } from "./Bar";
 
 const TOP_TITLE = 150;
 const FONT_SIZE = 50;

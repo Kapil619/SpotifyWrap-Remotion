@@ -1,5 +1,5 @@
 import { Sequence } from "remotion";
-import Scene2 from "../Scene2";
+import Scene2 from "./Scene2";
 import { Scene3 } from "./Scene3";
 
 export const Main = ({

@@ -2,7 +2,7 @@ import { Composition } from "remotion";
 import { Gradient } from "./Gradient";
 import { Scene3 } from "./Scene3";
 import "./tailwind.css";
-import Scene2 from "../Scene2";
+import Scene2 from "./Scene2";
 import { Main } from "./Main";
 
 // Each <Composition> is an entry in the sidebar!
