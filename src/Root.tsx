@@ -4,6 +4,7 @@ import { Scene3 } from "./Scene3";
 import "./tailwind.css";
 import Scene2 from "./Scene2";
 import { Main } from "./Main";
+import { Scene1 } from "./Scene1";
 
 // Each <Composition> is an entry in the sidebar!
 
@@ -16,6 +17,14 @@ export const RemotionRoot: React.FC = () => {
         width={720}
         height={1280}
         durationInFrames={120}
+        fps={30}
+      />
+      <Composition
+        id="Scene1"
+        component={Scene1}
+        width={720}
+        height={1280}
+        durationInFrames={210}
         fps={30}
       />
       <Composition
