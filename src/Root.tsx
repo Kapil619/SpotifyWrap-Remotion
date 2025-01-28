@@ -3,6 +3,7 @@ import { Gradient } from "./Gradient";
 import { Scene3 } from "./Scene3";
 import "./tailwind.css";
 import Scene2 from "../Scene2";
+import { Main } from "./Main";
 
 // Each <Composition> is an entry in the sidebar!
 
@@ -35,6 +36,18 @@ export const RemotionRoot: React.FC = () => {
         width={720}
         height={1280}
         durationInFrames={150}
+        fps={30}
+        defaultProps={{
+          topSongName: "Crawling",
+          topSongArtistName: "Linkin Park",
+        }}
+      />
+      <Composition
+        id="Main"
+        component={Main}
+        width={720}
+        height={1280}
+        durationInFrames={360}
         fps={30}
         defaultProps={{
           topSongName: "Crawling",
