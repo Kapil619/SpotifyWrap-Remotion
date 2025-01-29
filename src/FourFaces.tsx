@@ -7,7 +7,7 @@ import {
 } from "remotion";
 import { ScalingFace } from "./ScalingFace";
 
-export const FourFaces: React.FC = () => {
+export const FourFaces: React.FC<{ image: string }> = ({ image }) => {
   const { width, height, fps } = useVideoConfig();
   const frame = useCurrentFrame();
   const progress = spring({
@@ -18,9 +18,9 @@ export const FourFaces: React.FC = () => {
       damping: 1000,
     },
   });
-  const offsetX = interpolate(progress, [0, 1], [width / 4, 0]);
-  const offsetY = interpolate(progress, [0, 1], [height / 4, 0]);
-  const opacity = interpolate(progress, [0, 1], [0, 0.5]);
+  const offsetX = Math.max(0, interpolate(progress, [0, 1], [width / 3, -50]));
+  const offsetY = Math.min(0, interpolate(progress, [0, 1], [height / 3, -50]));
+  const opacity = interpolate(progress, [0, 1], [0, 1]);
   const clipPath = `inset(${offsetY}px ${offsetX}px ${offsetY}px ${offsetX}px)`;
   return (
     <AbsoluteFill
@@ -36,7 +36,7 @@ export const FourFaces: React.FC = () => {
           transform: "scaleX(-1)",
         }}
       >
-        <ScalingFace />
+        <ScalingFace image={image} />
       </AbsoluteFill>
       <AbsoluteFill
         style={{
@@ -45,7 +45,7 @@ export const FourFaces: React.FC = () => {
           left: width / 2,
         }}
       >
-        <ScalingFace />
+        <ScalingFace image={image} />
       </AbsoluteFill>
       <AbsoluteFill
         style={{
@@ -55,7 +55,7 @@ export const FourFaces: React.FC = () => {
           transform: "scale(-1)",
         }}
       >
-        <ScalingFace />
+        <ScalingFace image={image} />
       </AbsoluteFill>
       <AbsoluteFill
         style={{
@@ -66,7 +66,7 @@ export const FourFaces: React.FC = () => {
           transform: "scaleY(-1)",
         }}
       >
-        <ScalingFace />
+        <ScalingFace image={image} />
       </AbsoluteFill>
     </AbsoluteFill>
   );

@@ -1,6 +1,5 @@
 import { AbsoluteFill, Img, interpolate, useCurrentFrame } from "remotion";
-import weeknd from "./weeknd.jpg";
-export const ScalingFace = () => {
+export const ScalingFace = ({ image }: { readonly image: string }) => {
   const frame = useCurrentFrame();
   const progress = interpolate(frame, [0, 120], [0, 1], {
     extrapolateRight: "clamp",
@@ -15,7 +14,7 @@ export const ScalingFace = () => {
       }}
     >
       <Img
-        src={weeknd}
+        src={image}
         style={{
           position: "absolute",
           height: "100%",
