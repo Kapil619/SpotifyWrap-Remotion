@@ -32,7 +32,7 @@ export const GradientCircle = () => {
           opacity: progress,
         }}
       >
-        <Gradient />
+        <Gradient height={height} />
       </div>
     </AbsoluteFill>
   );

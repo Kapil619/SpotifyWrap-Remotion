@@ -5,6 +5,7 @@ import "./tailwind.css";
 import Scene2 from "./Scene2";
 import { Main } from "./Main";
 import { Scene1 } from "./Scene1";
+import { Wrapped } from "./Wrapped";
 
 // Each <Composition> is an entry in the sidebar!
 
@@ -22,6 +23,14 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="Scene1"
         component={Scene1}
+        width={720}
+        height={1280}
+        durationInFrames={210}
+        fps={30}
+      />
+      <Composition
+        id="Wrapped"
+        component={Wrapped}
         width={720}
         height={1280}
         durationInFrames={210}
@@ -56,7 +65,7 @@ export const RemotionRoot: React.FC = () => {
         component={Main}
         width={720}
         height={1280}
-        durationInFrames={360}
+        durationInFrames={360 + 210}
         fps={30}
         defaultProps={{
           topSongName: "Crawling",
