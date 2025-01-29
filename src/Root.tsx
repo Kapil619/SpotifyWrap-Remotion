@@ -1,10 +1,10 @@
 import { Composition } from "remotion";
 import { Gradient } from "./Gradient";
-import { Scene3 } from "./Scene3";
-import "./tailwind.css";
-import Scene2 from "./Scene2";
 import { Main } from "./Main";
 import { Scene1 } from "./Scene1";
+import Scene2 from "./Scene2";
+import { Scene3 } from "./Scene3";
+import "./tailwind.css";
 import { Wrapped } from "./Wrapped";
 
 // Each <Composition> is an entry in the sidebar!
@@ -58,6 +58,8 @@ export const RemotionRoot: React.FC = () => {
         defaultProps={{
           topSongName: "Crawling",
           topSongArtistName: "Linkin Park",
+          topSongCover:
+            "https://upload.wikimedia.org/wikipedia/en/2/2a/Linkin_Park_Hybrid_Theory_Album_Cover.jpg",
         }}
       />
       <Composition
@@ -70,6 +72,8 @@ export const RemotionRoot: React.FC = () => {
         defaultProps={{
           topSongName: "Crawling",
           topSongArtistName: "Linkin Park",
+          topSongCover:
+            "https://upload.wikimedia.org/wikipedia/en/2/2a/Linkin_Park_Hybrid_Theory_Album_Cover.jpg",
         }}
       />
     </>

@@ -1,14 +1,16 @@
 import { Sequence } from "remotion";
+import { Scene1 } from "./Scene1";
 import Scene2 from "./Scene2";
 import { Scene3 } from "./Scene3";
-import { Scene1 } from "./Scene1";
 
 export const Main = ({
   topSongName,
   topSongArtistName,
+  topSongCover,
 }: {
   readonly topSongName: string;
   readonly topSongArtistName: string;
+  readonly topSongCover: string;
 }) => {
   return (
     <>
@@ -20,6 +22,7 @@ export const Main = ({
       </Sequence>
       <Sequence from={420} durationInFrames={150}>
         <Scene3
+          topSongCover={topSongCover}
           topSongArtistName={topSongArtistName}
           topSongName={topSongName}
         />

@@ -35,9 +35,11 @@ const Title = styled.div`
 export const Scene3 = ({
   topSongName,
   topSongArtistName,
+  topSongCover,
 }: {
   readonly topSongName: string;
   readonly topSongArtistName: string;
+  readonly topSongCover: string;
 }) => {
   const frame = useCurrentFrame();
   const { width, height, fps } = useVideoConfig();
@@ -137,7 +139,7 @@ export const Scene3 = ({
             transform: `scale(${coverScale})`,
           }}
         >
-          <Album />
+          <Album imageSrc={topSongCover} />
         </div>
       </AbsoluteFill>
     </AbsoluteFill>

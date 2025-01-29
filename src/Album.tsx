@@ -1,6 +1,5 @@
-import styled from "styled-components";
 import { Img } from "remotion";
-import album from "../album.jpg";
+import styled from "styled-components";
 
 export const COVER_SIZE = 400;
 
@@ -10,11 +9,11 @@ const Cover = styled.div`
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.7);
 `;
 
-export const Album = () => {
+export const Album = ({ imageSrc }: { readonly imageSrc: string }) => {
   return (
     <Cover>
       <Img
-        src={album}
+        src={imageSrc}
         style={{
           height: COVER_SIZE,
           width: COVER_SIZE,
