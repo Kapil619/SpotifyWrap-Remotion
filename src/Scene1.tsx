@@ -5,6 +5,7 @@ import weeknd from "./weeknd.jpg";
 import onedirection from "./onedirection.jpg";
 import samsmith from "./samsmith.jpg";
 import ed from "./ed.jpg";
+import { GradientCircle } from "./GradientCircle";
 export const Scene1 = () => {
   const { height } = useVideoConfig();
   return (
@@ -19,6 +20,9 @@ export const Scene1 = () => {
       </Sequence>
       <Sequence from={90}>
         <FourFaces image={ed} />
+      </Sequence>
+      <Sequence from={120}>
+        <GradientCircle />
       </Sequence>
     </AbsoluteFill>
   );
